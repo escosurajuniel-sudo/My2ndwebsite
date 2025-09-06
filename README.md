@@ -2,7 +2,7 @@
 
 Welcome to my personal portfolio website! This project showcases my skills, services, and projects as an aspiring software developer. It includes responsive layouts, a custom-designed UI/UX, and several Java-based and web development projects.
 
-![Portfolio Preview](file:///C:/Users/USER/Documents/GitHub/My2ndwebsite/My2ndproject.html)
+![Portfolio Preview](file:///C:/Users/USER/Documents/GitHub/My2ndwebsite/My2ndproject.html#contact)
 
 ## 📁 Project Structure
 
