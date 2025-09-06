@@ -8,261 +8,292 @@
   <!-- Website Icon -->
   <link rel="icon" type="image/png" href="images/ux.png">
 
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
 
   <style>
-    :root{
-  --bg:#0b0b0b; 
-  --card:#141414; 
-  --muted:#bfbfbf; 
-  --accent:#ff5a00; 
-  --glass: rgba(255,255,255,0.03);
-  --maxw:1200px;
-  --radius:12px;
-  --transition:0.3s ease-in-out;
+    :root {
+      --bg:#0b0b0b;
+      --card:#141414;
+      --muted:#bfbfbf;
+      --accent:#ff5a00;
+      --glass: rgba(255,255,255,0.03);
+      --maxw:1200px;
+      --radius:12px;
+      --transition:0.3s ease-in-out;
+    }
+
+    body {
+      margin:0;
+      font-family:'Inter',sans-serif;
+      background:var(--bg);
+      color:#eee;
+      line-height:1.6;
+      scroll-behavior:smooth;
+    }
+
+    .wrap {
+      max-width:var(--maxw);
+      margin:36px auto;
+      padding:28px;
+    }
+
+    /* Navigation */
+    nav {
+      display:flex;
+      align-items:center;
+      gap:20px;
+    }
+
+    .logo {
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo div div:first-child {
+      font-size:16px;
+      font-weight:700;
+      color:#fff;
+    }
+
+    .logo div div:last-child {
+      font-size:12px;
+      color:var(--muted);
+    }
+
+    .nav-right {
+      margin-left:auto;
+      display:flex;
+      gap:16px;
+      align-items:center;
+    }
+
+    .nav-right a {
+      color:#ddd;
+      text-decoration:none;
+      padding:8px 14px;
+      border-radius:var(--radius);
+      font-size:14px;
+      transition:var(--transition);
+    }
+
+    .nav-right a:hover { 
+      background:rgba(255,90,0,0.1); 
+      color:var(--accent); 
+    }
+
+    .nav-right a.btn {
+  background: #000;       
+  color: #fff;            
+  font-weight: 700;
+  border: 1px solid #333;  
 }
 
-body{
-  margin:0;
-  font-family:'Inter',sans-serif;
-  background:var(--bg);
-  color:#eee;
-  line-height:1.6;
-  scroll-behavior:smooth;
-}
 
-.wrap{
-  max-width:var(--maxw);
-  margin:36px auto;
-  padding:28px;
-}
+    .nav-right a.active {
+      color:var(--accent);
+      font-weight:600;
+    }
 
-/* Navigation */
-nav{
-  display:flex;
-  align-items:center;
-  gap:20px;
-}
-.logo{
-  display:flex;
-  align-items:center;
-  gap:12px;
-}
-.logo div div:first-child{
-  font-size:16px;
-  font-weight:700;
-  color:#fff;
-}
-.logo div div:last-child{
-  font-size:12px;
-  color:var(--muted);
-}
-.nav-right{
-  margin-left:auto;
-  display:flex;
-  gap:16px;
-  align-items:center;
-}
-.nav-right a{
-  color:#ddd;
-  text-decoration:none;
-  padding:8px 14px;
-  border-radius:var(--radius);
-  font-size:14px;
-  transition:var(--transition);
-}
-.nav-right a:hover{ background:rgba(255,90,0,0.1); color:var(--accent); }
-.nav-right a.btn{
-  background:var(--accent);
-  color:#111;
-  font-weight:700;
-}
+    /* Hero */
+    .hero {
+      display:grid;
+      grid-template-columns:1fr 420px;
+      gap:28px;
+      align-items:center;
+      margin:36px 0;
+    }
 
-/* Hero */
-.hero{
-  display:grid;
-  grid-template-columns:1fr 420px;
-  gap:28px;
-  align-items:center;
-  margin:36px 0;
-}
-.hero-left h1{
-  font-size:46px;
-  margin:10px 0 8px;
-}
-.sub{
-  color:var(--muted);
-  font-size:16px;
-  margin-bottom:20px;
-}
-.cta button{
-  font-size:15px;
-  transition:var(--transition);
-}
+    .hero-left h1 {
+      font-size:46px;
+      margin:10px 0 8px;
+    }
 
-/* Profile Card */
-.profile-card{
-  background:linear-gradient(180deg, rgba(255,255,255,0.05), transparent); 
-  padding:28px;
-  border-radius:28px;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  border:2px solid var(--accent);
-  box-shadow:0 0 25px rgba(255,90,0,0.25);
-}
-.avatar{
-  width:260px;
-  height:260px;
-  border-radius:50%;
-  background:var(--bg) url('images/3.jpg') center/cover; 
-  border:6px solid var(--accent);
-  box-shadow:0 0 25px rgba(255,90,0,0.5);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-.avatar:hover{
-  transform: scale(1.05);
-  box-shadow:0 0 35px rgba(255,90,0,0.8);
-}
+    .sub {
+      color:var(--muted);
+      font-size:16px;
+      margin-bottom:20px;
+    }
 
-/* Section Titles */
-section{
-  margin:50px 0;
-}
-.section-title{
-  font-size:22px;
-  font-weight:600;
-  margin-bottom:14px;
-  color:#fff;
-}
+    .cta button {
+      font-size:15px;
+      transition:var(--transition);
+    }
 
-/* Services */
-.services{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:20px;
-}
-.card{
-  background:var(--card);
-  padding:20px;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,0.05);
-  transition:var(--transition);
-}
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 4px 20px rgba(255,90,0,0.2);
-}
-.card h3{font-size:18px; margin-bottom:10px;}
-.card p{font-size:14px; color:var(--muted); line-height:1.5;}
+    /* Profile Card */
+    .profile-card {
+      background:linear-gradient(180deg, rgba(255,255,255,0.05), transparent);
+      padding:28px;
+      border-radius:28px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      border:2px solid var(--accent);
+      box-shadow:0 0 25px rgba(255,90,0,0.25);
+    }
 
-/* Portfolio Carousel */
-.swiper-slide{
-  background:#111;
-  border-radius:var(--radius);
-  overflow:hidden;
-  height:240px;
-  display:flex;
-  align-items:flex-end;
-  justify-content:flex-start;
-}
-.swiper-slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  position:absolute; top:0; left:0;
-}
-.project-info{
-  position:relative;
-  background:linear-gradient(180deg,transparent,rgba(0,0,0,0.8));
-  color:#fff;
-  width:100%;
-  padding:12px;
-  font-size:14px;
-}
+    .avatar {
+      width:260px;
+      height:260px;
+      border-radius:50%;
+      background:var(--bg) url('images/3.jpg') center/cover;
+      border:6px solid var(--accent);
+      box-shadow:0 0 25px rgba(255,90,0,0.5);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-/* Blog */
-.blog-posts{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:20px;
-}
-.post-card{
-  background:var(--card);
-  padding:20px;
-  border-radius:var(--radius);
-  border:1px solid rgba(255,255,255,0.05);
-  transition:transform var(--transition);
-}
-.post-card:hover{
-  transform:translateY(-6px);
-}
-.post-card h3{font-size:16px; margin-bottom:6px;}
-.post-card p{font-size:13px; color:var(--muted);}
-.read-more{font-size:14px; font-weight:600; color:var(--accent);}
+    .avatar:hover {
+      transform: scale(1.05);
+      box-shadow:0 0 35px rgba(255,90,0,0.8);
+    }
 
-/* Contact */
-.contact-form{
-  background:var(--card);
-  padding:28px;
-  border-radius:var(--radius);
-  max-width:600px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
-  gap:14px;
-}
-.contact-form input,
-.contact-form textarea{
-  padding:14px;
-  border-radius:var(--radius);
-  border:none;
-  background:#1a1a1a;
-  color:#eee;
-  font-size:14px;
-}
-.contact-form button{
-  padding:14px;
-  border-radius:var(--radius);
-  border:none;
-  background:var(--accent);
-  color:#111;
-  font-weight:700;
-  cursor:pointer;
-  font-size:15px;
-  transition:var(--transition);
-}
-.contact-form button:hover{opacity:0.9;}
+    /* Section Titles */
+    section {
+      margin:50px 0;
+    }
 
-/* Footer */
-footer{
-  margin-top:50px;
-  padding-top:28px;
-  border-top:1px solid rgba(255,255,255,0.05);
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  font-size:13px;
-  color:var(--muted);
-}
+    .section-title {
+      font-size:22px;
+      font-weight:600;
+      margin-bottom:14px;
+      color:#fff;
+    }
 
-/* Responsive */
-@media (max-width:980px){
-  .hero{grid-template-columns:1fr;}
-  .services,.blog-posts{grid-template-columns:repeat(2,1fr);}
-  .hero-left h1{font-size:38px;}
-}
-@media (max-width:560px){
-  .wrap{padding:16px;}
-  .nav-right{display:none;}
-  .services,.blog-posts{grid-template-columns:1fr;}
-  .hero-left h1{font-size:28px;}
-  .sub{font-size:14px;}
-}
+    /* Services */
+    .services {
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:20px;
+    }
 
+    .card {
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,0.05);
+      transition:var(--transition);
+    }
+
+    .card:hover {
+      transform:translateY(-6px);
+      box-shadow:0 4px 20px rgba(255,90,0,0.2);
+    }
+
+    .card h3 { font-size:18px; margin-bottom:10px; }
+    .card p { font-size:14px; color:var(--muted); line-height:1.5; }
+
+    /* Portfolio Carousel */
+    .swiper-slide {
+      background:#111;
+      border-radius:var(--radius);
+      overflow:hidden;
+      height:240px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:flex-start;
+    }
+
+    .swiper-slide img {
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      position:absolute; top:0; left:0;
+    }
+
+    .project-info {
+      position:relative;
+      background:linear-gradient(180deg,transparent,rgba(0,0,0,0.8));
+      color:#fff;
+      width:100%;
+      padding:12px;
+      font-size:14px;
+    }
+
+    /* Blog */
+    .blog-posts {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .post-card {
+      background:var(--card);
+      padding:20px;
+      border-radius:var(--radius);
+      border:1px solid rgba(255,255,255,0.05);
+      transition:transform var(--transition);
+    }
+
+    .post-card:hover { transform:translateY(-6px); }
+    .post-card h3 { font-size:16px; margin-bottom:6px; }
+    .post-card p { font-size:13px; color:var(--muted); }
+    .read-more { font-size:14px; font-weight:600; color:var(--accent); }
+
+    /* Contact */
+    .contact-form {
+      background:var(--card);
+      padding:28px;
+      border-radius:var(--radius);
+      max-width:600px;
+      margin:auto;
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding:14px;
+      border-radius:var(--radius);
+      border:none;
+      background:#1a1a1a;
+      color:#eee;
+      font-size:14px;
+    }
+
+    .contact-form button {
+      padding:14px;
+      border-radius:var(--radius);
+      border:none;
+      background:var(--accent);
+      color:#111;
+      font-weight:700;
+      cursor:pointer;
+      font-size:15px;
+      transition:var(--transition);
+    }
+
+    .contact-form button:hover { opacity:0.9; }
+
+    /* Footer */
+    footer {
+      margin-top:50px;
+      padding-top:28px;
+      border-top:1px solid rgba(255,255,255,0.05);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero { grid-template-columns:1fr; }
+      .services, .blog-posts { grid-template-columns:repeat(2,1fr); }
+      .hero-left h1 { font-size:38px; }
+    }
+    @media (max-width:560px){
+      .wrap { padding:16px; }
+      .nav-right { display:none; }
+      .services, .blog-posts { grid-template-columns:1fr; }
+      .hero-left h1 { font-size:28px; }
+      .sub { font-size:14px; }
+    }
   </style>
 </head>
 <body>
@@ -271,7 +302,6 @@ footer{
       <div class="logo">
         <img src="images/logo.png" alt="Juniel Logo" style="height:40px; border-radius:8px;">
         <div>
-          <div style="font-size:14px;">Juniel Escosura</div>
           <div style="font-size:11px;color:var(--muted);margin-top:2px">Software Developer • Student</div>
         </div>
       </div>
@@ -289,7 +319,7 @@ footer{
       <section class="hero">
         <div class="hero-left">
           <div style="background:#22130f;color:var(--accent);display:inline-block;padding:6px 10px;border-radius:6px;font-weight:600">Welcome! I'm</div>
-          <h1>Juniel Escosura</h1>
+          <h1>Juniel Teraytay</h1>
           <div class="sub">College student • Aspiring Software Developer • Java, Web, App Dev</div>
           <p style="color:var(--muted);max-width:620px">I build practical, elegant software and web interfaces. I enjoy turning ideas into working apps and exploring clean UI/UX. Below are a few services and projects I've worked on feel free to reach out for freelance or collaboration.</p>
           <div class="cta" style="margin-top:18px">
@@ -306,7 +336,7 @@ footer{
       <section id="about-info">
         <div class="section-title">About Me</div>
         <div style="color:var(--muted);font-size:14px;max-width:700px;line-height:1.6">
-          <p>Hello! I'm <strong>Juniel Escosura</strong>, a college student and aspiring software developer. I specialize in <strong>Java development, web development, and UI/UX design</strong>. My passion lies in creating practical and elegant software solutions, turning ideas into functional applications, and exploring intuitive designs.</p>
+          <p>Hello! I'm <strong>Juniel Teraytay</strong>, a college student and aspiring software developer. I specialize in <strong>Java development, web development, and UI/UX design</strong>. My passion lies in creating practical and elegant software solutions, turning ideas into functional applications, and exploring intuitive designs.</p>
           <p>Through my projects, I’ve honed my skills in both front-end and back-end development, including database integration, responsive web design, and desktop application development. I am constantly learning, experimenting, and improving my craft.</p>
           <p>When I’m not coding, I enjoy gaming, sports, music, and watching movies. This helps me maintain balance, creativity, and fresh ideas for my projects.</p>
         </div>
@@ -350,12 +380,11 @@ footer{
               <div class="project-info">
                 <strong>Portfolio Website</strong><br>Personal showcase site
               </div>
-                      </div>
-
+            </div>
+          </div>
           <!-- Navigation Arrows -->
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
-
           <!-- Pagination Dots -->
           <div class="swiper-pagination"></div>
         </div>
@@ -406,30 +435,30 @@ footer{
       </section>
 
       <!-- Contact Section -->
-      <section id="contact">
-        <div class="section-title">Contact Me</div>
-        <p style="color:var(--muted);font-size:14px;margin-bottom:18px">
-          Feel free to reach out for collaborations, freelance work, or just to connect!
-        </p>
-        <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:start;align-items:center">
-  <div style="background:var(--card);padding:14px 18px;border-radius:10px;flex:1 1 auto;">
-    <strong>Email:</strong> 
-    <a href="mailto:escosurajuniel@gmail.com" style="color:var(--accent);text-decoration:none">escosurajuniel@gmail.com</a>
+<section id="contact">
+  <div class="section-title">Contact Me</div>
+  <p style="color:var(--muted);font-size:14px;margin-bottom:18px">
+    Feel free to reach out for collaborations, freelance work, or just to connect!
+  </p>
+  <div class="contact-cards" style="display:flex;gap:20px;flex-wrap:wrap;justify-content:start;align-items:center">
+    <div class="card" style="flex:1 1 auto;">
+      <strong>Email:</strong>  
+      <a href="mailto:escosurajuniel@gmail.com" style="color:var(--accent);text-decoration:none">escosurajuniel@gmail.com</a>
+    </div>
+    <div class="card" style="flex:1 1 auto;">
+      <strong>Phone:</strong> 
+      <a href="tel:(0965 887 5302)" style="color:var(--accent);text-decoration:none">(0965 887 5302)</a>
+    </div>
+    <div class="card" style="flex:2 1 auto;">
+      <strong>Socials:</strong>
+      <a href="https://www.facebook.com/profile.php?id=61579302597680" target="_blank" style="color:var(--accent);margin-left:8px">Facebook</a> •
+      <a href="https://x.com/Juniel_Teraytay" target="_blank" style="color:var(--accent);margin-left:8px">Twitter</a> •
+      <a href="https://www.linkedin.com/in/juniel-teraytay-767672380/" target="_blank" style="color:var(--accent);margin-left:8px">LinkedIn</a> •
+      <a href="https://github.com/escosurajuniel-sudo/JunielT" target="_blank" style="color:var(--accent);margin-left:8px">GitHub</a>
+    </div>
   </div>
-  <div style="background:var(--card);padding:14px 18px;border-radius:10px;flex:1 1 auto;">
-    <strong>Phone:</strong> 
-    <a href="tel:(0965 887 5302)" style="color:var(--accent);text-decoration:none">(0965 887 5302)</a>
-  </div>
-  <div style="background:var(--card);padding:14px 18px;border-radius:10px;flex:2 1 auto;">
-    <strong>Socials:</strong>
-    <a href="https://www.facebook.com/profile.php?id=61579302597680" target="_blank" style="color:var(--accent);margin-left:8px">Facebook</a> •
-    <a href="https://x.com/Juniel_Teraytay" target="_blank" style="color:var(--accent);margin-left:8px">Twitter</a> •
-    <a href="https://www.linkedin.com/in/juniel-teraytay-767672380/" target="_blank" style="color:var(--accent);margin-left:8px">LinkedIn</a> •
-    <a href="https://github.com/escosurajuniel-sudo/JunielT" target="_blank" style="color:var(--accent);margin-left:8px">GitHub</a>
-  </div>
-</div>
+</section>
 
-      </section>
     </main>
 
     <!-- Footer -->
@@ -446,19 +475,31 @@ footer{
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Enhanced JavaScript -->
   <script>
-    // Swiper
+    // Swiper for Portfolio
     var swiper = new Swiper(".mySwiper", {
-      slidesPerView: 1,
-      spaceBetween: 20,
-      loop: true,
-      pagination: { el: ".swiper-pagination", clickable: true },
-      navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 }
-      }
-    });
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: { slidesPerView: 2 },
+    1024: { slidesPerView: 3 },
+  }
+});
 
     // Blog Read More Toggle
     document.querySelectorAll(".read-more").forEach(button => {
@@ -478,9 +519,51 @@ footer{
     });
 
     // Smooth Scroll for Nav Buttons
-    function goToAbout(){ document.getElementById("about-info").scrollIntoView({behavior:"smooth"}); }
-    function goToServices(){ document.getElementById("services").scrollIntoView({behavior:"smooth"}); }
-    function goToPortfolio(){ document.getElementById("portfolio").scrollIntoView({behavior:"smooth"}); }
+    function goToAbout() { document.getElementById("about-info").scrollIntoView({behavior:"smooth"}); }
+    function goToServices() { document.getElementById("services").scrollIntoView({behavior:"smooth"}); }
+    function goToPortfolio() { document.getElementById("portfolio").scrollIntoView({behavior:"smooth"}); }
+
+    // Highlight active nav link on scroll
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll(".nav-right a");
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
+      });
+      navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) link.classList.add("active");
+      });
+    });
+
+    // Back-to-top button
+    const backToTop = document.createElement("button");
+    backToTop.textContent = "↑ Top";
+    backToTop.style.cssText = "position:fixed;bottom:30px;right:30px;padding:12px 16px;background:var(--accent);color:#111;border:none;border-radius:8px;cursor:pointer;display:none;z-index:1000;";
+    document.body.appendChild(backToTop);
+    backToTop.addEventListener("click", () => { window.scrollTo({top:0, behavior:"smooth"}); });
+    window.addEventListener("scroll", () => { backToTop.style.display = (window.scrollY > 400) ? "block" : "none"; });
+
+    // Hero fade-in animation
+    const heroText = document.querySelector(".hero-left");
+    heroText.style.opacity = 0;
+    heroText.style.transform = "translateY(20px)";
+    window.addEventListener("load", () => {
+      setTimeout(() => {
+        heroText.style.transition = "opacity 1s, transform 1s";
+        heroText.style.opacity = 1;
+        heroText.style.transform = "translateY(0)";
+      }, 300);
+    });
+
+    // Card hover glow effect
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.addEventListener("mouseenter", () => card.style.boxShadow = "0 10px 25px rgba(255,90,0,0.3)");
+      card.addEventListener("mouseleave", () => card.style.boxShadow = "");
+    });
   </script>
 </body>
 </html>
