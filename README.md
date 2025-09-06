@@ -1,90 +1,81 @@
-# 🌐 Juniel Teraytay — Portfolio Website
+# 🌐 Juniel Teraytay — Developer Portfolio
 
-Welcome to my **personal portfolio website**, built with pure HTML, CSS, and JavaScript. This site showcases my skills, projects, and services as an **aspiring software developer**, designed with clean UI/UX principles in mind.
+Welcome to my personal portfolio website! This project showcases my skills, services, and projects as an aspiring software developer. It includes responsive layouts, a custom-designed UI/UX, and several Java-based and web development projects.
 
-## 🚀 Live Demo
+![Portfolio Preview](./Images/4a493b75-442e-497e-9f82-1b19721220c2.png)
 
-🌍 [Visit Portfolio Website](https://github.com/escosurajuniel-sudo/My2ndwebsite)  
-*(Make sure your GitHub Pages is enabled on the `main` branch with root folder.)*
+## 📁 Project Structure
 
+## 🔍 Features
 
----
+### 💡 About Me
+- Name: **Juniel Teraytay**
+- Role: College student • Aspiring Software Developer
+- Tech Skills: Java, Web Development, Android Basics, UI/UX Design
 
-## ✨ Features
+### 🛠️ My Services
+- **Web Development:** Front-end & back-end integration
+- **App Development:** Java-based desktop & mobile apps
+- **UI/UX Design:** Visual designs, mockups, and logos
 
-- 🎯 Responsive design using **pure CSS**
-- 🧭 Smooth scroll navigation
-- 🖼️ Interactive portfolio carousel (Swiper.js)
-- 🧠 Animated "Read More" blog cards
-- 🧪 Clean, modular structure and reusable components
-- 📱 Mobile-friendly and performance optimized
-- 📇 Social media and contact integration
+### 🧪 Projects Showcased
+- **Student Portal** – Java + MySQL attendance system
+- **Bank System** – Account management app
+- **Laundry Management** – Inventory and reporting tool
+- **Portfolio Website** – This portfolio
 
----
+### 📝 Blog Section
+- Articles on user flows, project case studies, and Java apps
 
-## 🛠️ Built With
-
-- **HTML5** – semantic and accessible structure
-- **CSS3** – custom design, variables, and responsive layout
-- **JavaScript** – interactivity and dynamic behavior
-- **[Swiper.js](https://swiperjs.com/)** – portfolio carousel
-- **[Google Fonts – Inter](https://fonts.google.com/specimen/Inter)**
-
----
-
-## 👨‍💻 About Me
-
-I'm **Juniel Teraytay**, a college student passionate about:
-- Java development
-- Web & mobile app development
-- UI/UX design
-
-I love turning ideas into real projects and exploring clean, functional design patterns.
-
-> This portfolio was created under the guidance of my instructors and represents my growth and learning journey.
+### 📞 Contact Info
+- **Email:** [escosurajuniel@gmail.com](mailto:escosurajuniel@gmail.com)  
+- **Phone:** (0965 887 5302)  
+- **Socials:**  
+  - [Facebook](https://facebook.com/profile.php?id=61579302597680)  
+  - [Twitter](https://x.com/Juniel_Teraytay)  
+  - [LinkedIn](https://www.linkedin.com/in/juniel-teraytay-767672380/)  
+  - [GitHub](https://github.com/escosurajuniel-sudo/JunielT)
 
 ---
 
-## 🧰 Services I Offer
+## 🚀 Technologies Used
 
-- 🌐 Web Development
-- 📱 Application Development
-- 🎨 UI/UX & Graphic Design
-
----
-
-## 📸 Featured Projects
-
-- **Student Portal** – Java + MySQL attendance system  
-- **Bank System** – Java desktop banking simulation  
-- **Laundry Management** – Inventory & reports system  
-- **Portfolio Website** – Personal branding and showcase
+- **HTML5** / **CSS3**
+- **JavaScript** (DOM manipulation, Swiper.js)
+- **Responsive Web Design**
+- **Google Fonts** (`Inter`)
+- **SwiperJS** for carousels
 
 ---
 
-## 📬 Contact Me
+## 🖼️ Design
 
-📧 Email: [escosurajuniel@gmail.com](mailto:escosurajuniel@gmail.com)  
-📞 Phone: (0965 887 5302)  
-🔗 Socials:  
-[Facebook](https://www.facebook.com/profile.php?id=61579302597680) • [Twitter](https://x.com/Juniel_Teraytay) • [LinkedIn](https://www.linkedin.com/in/juniel-teraytay-767672380/) • [GitHub](https://github.com/escosurajuniel-sudo/JunielT)
-
----
-
-## 📝 License
-
-This project is for personal portfolio and educational use. Feel free to explore and get inspired, but please don't reuse it without permission.
+- Dark-themed UI for a modern developer aesthetic  
+- Hero animation and interactive elements  
+- Reusable card components  
+- Fully responsive for mobile and desktop
 
 ---
 
-## 🙌 Acknowledgements
+## 📌 Notes
 
-- Special thanks to my instructors and mentors.
-- Inspired by modern portfolio UI trends.
+- Portfolio navigation uses smooth scrolling
+- Uses `swiper.js` for project carousel
+- Includes blog section with expandable cards
+- Contact section styled with clickable links
 
+---
 
-## 📂 Project Structure
+## 🔧 Future Improvements
 
+- Host live version (e.g., GitHub Pages or Netlify)
+- Add contact form backend (e.g., Firebase, Formspree)
+- Expand blog posts into markdown or CMS format
+- Make services and projects dynamically loaded via JSON
 
+---
 
+## 🧑‍💻 Author
 
+**Juniel Teraytay**  
+[LinkedIn](https://www.linkedin.com/in/juniel-teraytay-767672380/) • [GitHub](https://github.com/escosurajuniel-sudo/JunielT)
