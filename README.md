@@ -4,7 +4,7 @@ Welcome to my **personal portfolio website**, built with pure HTML, CSS, and Jav
 
 ## 🚀 Live Demo
 
-🌍 [Visit Portfolio Website](https://escosurajuniel-sudo.github.io/JunielT/)  
+🌍 [Visit Portfolio Website](https://github.com/escosurajuniel-sudo/My2ndwebsite)  
 *(Make sure your GitHub Pages is enabled on the `main` branch with root folder.)*
 
 
