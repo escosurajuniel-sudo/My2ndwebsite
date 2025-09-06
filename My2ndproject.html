@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Juniel Escosura — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b; --card:#0f0f0f; --muted:#bdbdbd; --accent:#ff5a00; --glass: rgba(255,255,255,0.03);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:#eee; -webkit-font-smoothing:antialiased;
+    }
+    .wrap{max-width:var(--maxw); margin:36px auto; padding:28px}
+    nav{display:flex;align-items:center;gap:20px}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--accent)}
+    .logo .ring{width:34px;height:18px;border-radius:4px;background:linear-gradient(90deg,var(--accent),#ff7a3a);display:inline-block}
+    .nav-right{margin-left:auto;display:flex;gap:16px;align-items:center}
+    .nav-right a{color:#ddd;text-decoration:none;padding:8px 12px;border-radius:8px}
+    .nav-right a.btn{background:var(--accent);color:#111;font-weight:700}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin:36px 0}
+    .hero-left h1{font-size:44px;margin:0 0 6px}
+    .sub{color:var(--muted);margin-bottom:18px}
+    .cta{display:flex;gap:12px}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.08);padding:12px 18px;border-radius:10px;color:#fff}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#ff7a3a);border:none;padding:12px 18px;border-radius:10px;color:#111;font-weight:700}
+
+    .profile-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); padding:24px;border-radius:28px;position:relative;display:flex;justify-content:center;align-items:center}
+    .avatar{width:260px;height:260px;border-radius:50%;background:#fff url('https://via.placeholder.com/260') center/cover;border:14px solid #fff;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+
+    /* Services */
+    section{margin:48px 0}
+    .section-title{font-size:20px;margin-bottom:10px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+    .card h3{margin:8px 0}
+
+    /* Case studies */
+    .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .case{height:180px;border-radius:8px;background:#111;display:flex;align-items:end;padding:12px}
+
+    /* Pricing */
+    .prices{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .price{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);padding:18px;border-radius:10px;text-align:center}
+    .price b{font-size:22px;color:var(--accent)}
+    .select{margin-top:12px;padding:10px;border-radius:8px;border:none;background:transparent;color:var(--muted);cursor:pointer}
+
+    /* Testimonials */
+    .testimonials{display:flex;gap:18px}
+    .testimonial{flex:1;background:var(--card);padding:18px;border-radius:12px}
+
+    /* Blog */
+    .blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .blog-card{background:#0f0f0f;border-radius:10px;padding:12px}
+
+    /* Subscribe */
+    .subscribe{background:linear-gradient(90deg, rgba(255,90,0,0.06), rgba(255,90,0,0.02));padding:22px;border-radius:18px;display:flex;gap:12px;align-items:center}
+    input[type="email"]{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+    .sub-btn{padding:10px 14px;border-radius:8px;background:var(--accent);border:none;color:#111}
+
+    footer{margin-top:36px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.03);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .case-grid,.services,.blog-grid{grid-template-columns:repeat(2,1fr)}
+      .prices{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      .wrap{padding:16px}
+      .nav-right{display:none}
+      .case-grid,.services,.blog-grid{grid-template-columns:1fr}
+      .prices{grid-template-columns:1fr}
+      .hero-left h1{font-size:28px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <div class="logo">
+        <span class="ring"></span>
+        <div>
+          <div style="font-size:14px;">Juniel Escosura</div>
+          <div style="font-size:11px;color:var(--muted);margin-top:2px">Software Developer • Student</div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a class="btn" href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="about">
+        <div class="hero-left">
+          <div style="background:#22130f;color:var(--accent);display:inline-block;padding:6px 10px;border-radius:6px;font-weight:600">Welcome! I'm</div>
+          <h1>Juniel Escosura</h1>
+          <div class="sub">College student • Aspiring Software Developer • Java, Web, App Dev</div>
+          <p style="color:var(--muted);max-width:620px">I build practical, elegant software and web interfaces. I enjoy turning ideas into working apps and exploring clean UI/UX. Below are a few services and projects I've worked on — feel free to reach out for freelance or collaboration.</p>
+          <div class="cta" style="margin-top:18px">
+            <button class="btn-primary">Hire Me</button>
+            <button class="btn-ghost">Explore</button>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="avatar" aria-hidden="true"></div>
+        </div>
+      </section>
+
+      <section id="services">
+        <div class="section-title">Our Services</div>
+        <div class="services">
+          <div class="card">
+            <h3>Web Development</h3>
+            <p style="color:var(--muted);font-size:14px">Responsive websites, front-end and basic back-end integration.</p>
+          </div>
+          <div class="card">
+            <h3>Application Development</h3>
+            <p style="color:var(--muted);font-size:14px">Desktop and mobile apps using Java, Android basics and cross-platform tools.</p>
+          </div>
+          <div class="card">
+            <h3>UI / UX & Graphic Design</h3>
+            <p style="color:var(--muted);font-size:14px">Clean mockups, logos, and visuals for apps and websites.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio">
+        <div class="section-title">View Our Case Studies</div>
+        <div class="case-grid" style="margin-top:12px">
+          <div class="case" style="background:url('https://via.placeholder.com/600x400') center/cover"> <div style="background:linear-gradient(180deg,transparent, rgba(0,0,0,0.6));padding:12px;border-radius:8px;margin:8px"> <strong>Student Portal</strong><div style="color:var(--muted);font-size:13px">School project: attendance system (Java, MySQL)</div></div></div>
+          <div class="case" style="background:url('https://via.placeholder.com/600x400/222') center/cover"> <div style="background:linear-gradient(180deg,transparent, rgba(0,0,0,0.6));padding:12px;border-radius:8px;margin:8px"> <strong>Ticket Booking UI</strong><div style="color:var(--muted);font-size:13px">GUI prototype with priority queue handling</div></div></div>
+          <div class="case" style="background:url('https://via.placeholder.com/600x400/333') center/cover"> <div style="background:linear-gradient(180deg,transparent, rgba(0,0,0,0.6));padding:12px;border-radius:8px;margin:8px"> <strong>Laundry Management</strong><div style="color:var(--muted);font-size:13px">Business system: inventory & reports</div></div></div>
+        </div>
+      </section>
+
+      <section id="pricing">
+        <div class="section-title">Our Affordable Pricing Plans</div>
+        <div class="prices" style="margin-top:14px">
+          <div class="price">
+            <div>Basic</div>
+            <div style="font-size:20px"><b>$19.99</b></div>
+            <div style="color:var(--muted);font-size:13px">Landing page / small tweaks</div>
+            <button class="select">Select Plan</button>
+          </div>
+          <div class="price">
+            <div>Standard</div>
+            <div style="font-size:20px"><b>$39.99</b></div>
+            <div style="color:var(--muted);font-size:13px">Multi-page site / small app</div>
+            <button class="select">Select Plan</button>
+          </div>
+          <div class="price">
+            <div>Premium</div>
+            <div style="font-size:20px"><b>$59.99</b></div>
+            <div style="color:var(--muted);font-size:13px">Full project & deployment</div>
+            <button class="select">Select Plan</button>
+          </div>
+          <div class="price">
+            <div>Golden</div>
+            <div style="font-size:20px"><b>$79.99</b></div>
+            <div style="color:var(--muted);font-size:13px">Ongoing support & maintenance</div>
+            <button class="select">Select Plan</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials">
+        <div class="section-title">What People Say About Me</div>
+        <div class="testimonials" style="margin-top:12px">
+          <div class="testimonial">
+            <strong>Chris Thomas</strong>
+            <p style="color:var(--muted);font-size:14px">"Juniel delivered a clean interface for our student portal. Fast, communicative and reliable."</p>
+          </div>
+          <div class="testimonial">
+            <strong>Client X</strong>
+            <p style="color:var(--muted);font-size:14px">"Great problem solving and clear documentation. Would hire again."</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="blog">
+        <div class="section-title">Latest Blog</div>
+        <div class="blog-grid" style="margin-top:12px">
+          <div class="blog-card"><img src="https://via.placeholder.com/400x200" alt="post" style="width:100%;border-radius:8px 8px 0 0"><h4 style="margin:8px 0">Designing simple user flows</h4><div style="color:var(--muted);font-size:13px">26th October 2023</div></div>
+          <div class="blog-card"><img src="https://via.placeholder.com/400x200" alt="post" style="width:100%;border-radius:8px 8px 0 0"><h4 style="margin:8px 0">How I built an attendance app</h4><div style="color:var(--muted);font-size:13px">12th October 2023</div></div>
+          <div class="blog-card"><img src="https://via.placeholder.com/400x200" alt="post" style="width:100%;border-radius:8px 8px 0 0"><h4 style="margin:8px 0">Preparing for coding interviews</h4><div style="color:var(--muted);font-size:13px">3rd October 2023</div></div>
+        </div>
+      </section>
+
+      <section id="subscribe" style="margin-top:28px">
+        <div class="subscribe">
+          <div style="flex:1">
+            <div style="font-weight:700;">Subscribe to get information, latest news and offers</div>
+            <div style="color:var(--muted);font-size:13px;margin-top:6px">No spam — unsubscribe anytime.</div>
+          </div>
+          <div style="display:flex;flex:0 0 420px;gap:8px">
+            <input type="email" placeholder="Your email" />
+            <button class="sub-btn">Subscribe</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:28px">
+        <div class="section-title">Get In Touch</div>
+        <div class="card" style="margin-top:12px;display:flex;gap:12px;align-items:center">
+          <div style="flex:1">
+            <div style="font-weight:700">Send Mail</div>
+            <div style="color:var(--muted);font-size:13px">juniel@example.com</div>
+          </div>
+          <div style="flex:1">
+            <div style="font-weight:700">Make a Call</div>
+            <div style="color:var(--muted);font-size:13px">+63 900 000 0000</div>
+          </div>
+          <div style="flex:1">
+            <div style="font-weight:700">Get in touch</div>
+            <div style="color:var(--muted);font-size:13px">CEIT - College</div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div class="logo" style="font-size:14px"> <span class="ring"></span> Juniel</div>
+        <div style="color:var(--muted);font-size:13px">© 2025 Juniel. All rights reserved.</div>
+      </div>
+      <div style="color:var(--muted);font-size:13px">Follow: Behance • GitHub • LinkedIn</div>
+    </footer>
+  </div>
+
+  <script>
+    // Basic interactions (no dependencies)
+    document.querySelectorAll('.select').forEach(btn=>btn.addEventListener('click',()=>{
+      btn.textContent = 'Selected'; btn.style.background = 'var(--accent)'; btn.style.color = '#111';
+    }));
+    document.querySelector('.sub-btn').addEventListener('click',()=>{
+      alert('Subscribed (placeholder) — thanks!');
+    });
+  </script>
+</body>
+</html>
